@@ -16,9 +16,9 @@ module ReadmeReport
       temp = check_correct temp, 'pod install', ['pod update']
 
       puts "Checking links ..."
-      log = AwesomeBot::Log.new(true)
+      # log = AwesomeBot::Log.new(true)
       whitelisted = []
-      r = AwesomeBot::check(temp, nil, false, log)
+      r = AwesomeBot::check temp
 
       issues_count = r.statuses_issues.count
       if issues_count==0
@@ -37,7 +37,7 @@ module ReadmeReport
             if status != -1
               puts "#{s['status'].to_s.red} #{url}"
             else
-              puts "#{url} #{s['error'].red}"
+              puts "#{url} #{s['error'].to_s.red}"
             end
           end
         end
