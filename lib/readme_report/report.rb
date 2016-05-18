@@ -13,7 +13,7 @@ module ReadmeReport
 
       temp = check_correct temp, 'Xcode', ['XCode', 'xCode']
       temp = check_correct temp, 'CocoaPods', ['Cocoapods', 'Cocoa Pods', 'cocoa pods']
-      temp = check_correct temp, 'pod install', ['pod update']
+      temp = check_correct temp, 'pod update', ['pod install']
 
       puts "Checking links ..."
       # log = AwesomeBot::Log.new(true)
